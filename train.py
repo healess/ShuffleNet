@@ -67,7 +67,7 @@ class Train:
                         run_list.append(tf.assign(variable, value))
             self.sess.run(run_list)
             print("Weights loaded\n\n")
-        except KeyboardInterrupt:
+        except Exception as e:
             print("No pretrained ImageNet weights exist. Skipping...\n\n")
 
     ############################################################################################################
